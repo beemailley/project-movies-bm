@@ -13,4 +13,4 @@ I have also worked, separately, to included the dropdown menu that changes which
 ## View it live
 
 The link for the team's website: https://cosmic-daffodil-7c032f.netlify.app/
-The link for my website with some additional changes: 
+The link for my website with some additional changes: https://adorable-fox-6823e2.netlify.app/
