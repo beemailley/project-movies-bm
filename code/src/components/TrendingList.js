@@ -1,18 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { API_KEY } from 'utils/key';
-import { BASE_URL } from 'utils/urls';
+// import { BASE_URL } from 'utils/urls';
+import { Oval } from 'react-loader-spinner';
+// import { API_KEY } from 'utils/urls';
 
 const TrendingList = () => {
   const [movieList, setMovieList] = useState([])
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
-    fetch(BASE_URL)
+    setLoading(true);
+
+    fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_KEY}`)
       .then((response) => response.json())
       .then((data) => setMovieList(data.results))
       .catch((error) => console.log(error))
+      .finally(() => { setLoading(false) })
   }, [])
   return (
     <section className="front-page">
+      {loading && (
+        <Oval
+          ariaLabel="loading-indicator"
+          height={100}
+          width={100}
+          strokeWidth={2}
+          strokeWidthSecondary={3}
+          color="black"
+          secondaryColor="white" />
+      )}
       {movieList.map((movie) => {
         return (
           <Link key={movie.id} to={`/movies/${movie.id}`}>

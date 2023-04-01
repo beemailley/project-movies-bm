@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-// import { API_KEY } from 'utils/key';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClapperboard } from '@fortawesome/free-solid-svg-icons'
-import { SINGLE_MOVIE } from 'utils/urls';
+// import { SINGLE_MOVIE } from 'utils/urls';
 
 const SingleMovie = () => {
   const { id } = useParams()
   const [movieDetails, setMovieDetails] = useState([])
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(SINGLE_MOVIE(id))
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_KEY}`)
       .then((response) => response.json())
       .then((data) => setMovieDetails(data))
       .catch((error) => console.log(error))

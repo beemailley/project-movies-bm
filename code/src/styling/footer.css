@@ -28,6 +28,11 @@ footer {
     height: 30px;
     object-fit: cover;
     opacity: .75;
+    color: white;
+  }
+
+  .contact-logo a{
+    color: white;
   }
   
   .contact-logo:hover {
