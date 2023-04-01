@@ -13,10 +13,11 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    width: 160px;
+    width: 180px;
     height: 25px;
     margin: 30px 0 30px 20px; 
     opacity: .85;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .back-button:hover {

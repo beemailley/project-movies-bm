@@ -1,3 +1,22 @@
+.list-selector {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+    color: white;
+}
+
+.list-selector select {
+    margin: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.list-selector h1 {
+    margin: 10px;
+}
+
+
 .front-page {
     display: flex;
     flex-wrap: wrap;
