@@ -7,15 +7,23 @@
     color: white;
 }
 
+.list-selector h1 {
+    margin: 5px;
+}
+
+.header-emojis {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.select-label {
+    margin: 5px 0;
+}
+
 .list-selector select {
     margin: 5px;
     font-family: 'IBM Plex Mono', monospace;
 }
-
-.list-selector h1 {
-    margin: 10px;
-}
-
 
 .front-page {
     display: flex;

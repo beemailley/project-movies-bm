@@ -35,8 +35,9 @@ const TrendingList = () => {
           secondaryColor="white" />
       )}
       <div className="list-selector">
-        <h1>&#127903;&#65039;&#127871; The Movie Page &#127871;&#127903;&#65039;</h1>
-        <p>Would you like to see movies that are: </p>
+        <h1>The Movie Page</h1>
+        <p className="header-emojis">&#127903;&#65039;&#127871;&#127871;&#127903;&#65039;</p>
+        <p className="select-label">See movies that are: </p>
         <select value={listChoice} onChange={handleListSelection}>
           <option value disabled>Please select one:</option>
           <option value="trending/movie/day">Trending</option>
